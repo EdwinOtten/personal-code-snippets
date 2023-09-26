@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>CreateMediatRQueryValidator</Title>
+      <Author>Edwin Otten</Author>
+      <Description>Create MediatR QueryValidator</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mqv</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object Editable="true">
+          <ID>QueryName</ID>
+          <ToolTip>Query name</ToolTip>
+          <Default>QueryName</Default>
+          <Type>Object</Type>
+          <Function>
+          </Function>
+        </Object>
+      </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>FluentValidation</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp" Delimiter="$" Kind="file"><![CDATA[public class $QueryName$Validator : AbstractValidator<$QueryName$Query>
+        {
+            public $QueryName$Validator()
+            {
+                $end$
+            }
+        }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

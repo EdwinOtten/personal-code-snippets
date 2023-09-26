@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>CreateMediatRQueryHandlerValidator</Title>
+      <Author>Edwin Otten</Author>
+      <Description>Create MediatR Query + Handler + Valdiator</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mqa</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>QueryName</ID>
+          <ToolTip>Query name</ToolTip>
+          <Default>QueryName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>returnType</ID>
+          <ToolTip>Query return type</ToolTip>
+          <Default>TReturn</Default>
+          <Type>Object</Type>
+          <Function>
+          </Function>
+        </Object>
+      </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>FluentValidation</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp" Delimiter="$" Kind="file"><![CDATA[public record $QueryName$Query() : IRequest<$returnType$>;
+
+        public class $QueryName$Validator : AbstractValidator<$QueryName$Query>
+        {
+            public $QueryName$Validator()
+            {
+                throw new NotImplementedException();
+            }
+        }
+       
+        public class $QueryName$QueryHandler : IRequestHandler<$QueryName$Query, $returnType$>
+        {
+            public $QueryName$QueryHandler()
+            {
+            }
+
+            public async Task<$returnType$> Handle($QueryName$Query request, CancellationToken cancellationToken)
+            {
+                throw new NotImplementedException();
+            }
+        }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

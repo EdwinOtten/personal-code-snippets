@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>CreateMediatRQuery</Title>
+      <Author>Edwin Otten</Author>
+      <Description>Create MediatR Query</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mq</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>QueryName</ID>
+          <ToolTip>Query name</ToolTip>
+          <Default>QueryName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>returnType</ID>
+          <ToolTip>Query return type</ToolTip>
+          <Default>TReturn</Default>
+          <Type>Object</Type>
+          <Function>
+          </Function>
+        </Object>
+      </Declarations>
+      <Imports>
+      </Imports>
+      <Code Language="csharp" Delimiter="$" Kind="file"><![CDATA[public record $QueryName$Query($end$) : IRequest<$returnType$>;]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
