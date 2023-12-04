@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>CreateMediatRCommandHandler</Title>
+      <Author>Edwin Otten</Author>
+      <Description>Create MediatR CommandHandler</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mch</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>CommandName</ID>
+          <ToolTip>Command name</ToolTip>
+          <Default>CommandName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Imports>
+      </Imports>
+      <Code Language="csharp" Delimiter="$" Kind="file"><![CDATA[public class $CommandName$CommandHandler : IRequestHandler<$CommandName$Command>
+        {
+            public $CommandName$CommandHandler()
+            {
+            }
+
+            public async Task Handle($CommandName$Command request, CancellationToken cancellationToken)
+            {
+                throw new NotImplementedException();
+            }
+        }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
